@@ -1,10 +1,9 @@
 
 import arcade
-x = 100
-y = 100
 
 
 class MyGame(arcade.Window):
+
     def __init__(self, width, height, title):
         # Call the parent class's init function
         super().__init__(width, height, title)
@@ -16,13 +15,11 @@ class MyGame(arcade.Window):
         """
 
         arcade.start_render()
-
-        arcade.draw_circle_filled(x, y, 20, (255, 54, 34))
-
-    def on_update(self):
-        x += 1
-        y += 1
-        arcade.draw_circle_filled(x, y, 20, (255, 54, 34))
+        arcade.set_background_color(arcade.color.SKY_BLUE)
+        arcade.draw_circle_filled(320, 240, 90, arcade.color.COOL_GREY)
+        arcade.draw_circle_filled(320, 220, 70, arcade.color.BEIGE)
+        arcade.draw_ellipse_filled(320, 340, 110, 100, arcade.color.COOL_GREY)
+        arcade.finish_render()
 
 
 def main():
