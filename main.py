@@ -44,8 +44,11 @@ class MyGame(arcade.Window):
         arcade.draw_circle_filled(350, 335, 8, arcade.color.BLACK)
         arcade.draw_circle_filled(355, 335, 2, arcade.color.WHITE)
 
-        # nose UNFINISHED
-        arcade.draw_triangle_filled(360, 210, 370, 210, 360, 195, arcade.color.BLACK)
+        # nose
+        arcade.draw_triangle_filled(310, 330, 330, 330, 320, 320, arcade.color.BLACK)
+
+        # ears unfinished
+        arcade.draw_lrtb_rectangle_outline(330, 345, 350, 300, arcade.color.BYZANTIUM, 5)
 
         # text
         arcade.draw_text("totoro", 20, 70, arcade.color.CASTLETON_GREEN)
