@@ -18,6 +18,18 @@ class MyGame(arcade.Window):
         # background
         arcade.set_background_color(arcade.color.SKY_BLUE)
 
+        # right ear
+        arcade.draw_lrtb_rectangle_outline(340, 355, 400, 300, arcade.color.BLACK, 5)
+        arcade.draw_triangle_outline(332, 393, 360, 393, 347, 417, arcade.color.BLACK, 5)
+        arcade.draw_triangle_filled(332, 393, 360, 393, 347, 417, arcade.color.COOL_GREY)
+        arcade.draw_lrtb_rectangle_filled(340, 355, 400, 300, arcade.color.COOL_GREY)
+
+        # left ear
+        arcade.draw_lrtb_rectangle_outline(290, 305, 400, 300, arcade.color.BLACK, 5)
+        arcade.draw_triangle_outline(282, 393, 310, 393, 297, 417, arcade.color.BLACK, 5)
+        arcade.draw_triangle_filled(282, 393, 310, 393, 297, 417, arcade.color.COOL_GREY)
+        arcade.draw_lrtb_rectangle_filled(290, 305, 400, 300, arcade.color.COOL_GREY)
+
         # arm 1
         arcade.draw_ellipse_filled(245, 230, 50, 130, arcade.color.COOL_GREY, 5)
         arcade.draw_ellipse_outline(245, 230, 50, 130, arcade.color.BLACK, 3, 5)
@@ -37,21 +49,32 @@ class MyGame(arcade.Window):
 
         # eyes
         arcade.draw_ellipse_filled(295, 335, 25, 20, arcade.color.WHITE, 0)
-        arcade.draw_circle_filled(295, 335, 8, arcade.color.BLACK)
+        arcade.draw_circle_filled(295, 335, 7, arcade.color.BLACK)
         arcade.draw_circle_filled(300, 335, 2, arcade.color.WHITE)
 
         arcade.draw_ellipse_filled(350, 335, 25, 20, arcade.color.WHITE, 0)
-        arcade.draw_circle_filled(350, 335, 8, arcade.color.BLACK)
+        arcade.draw_circle_filled(350, 335, 7, arcade.color.BLACK)
         arcade.draw_circle_filled(355, 335, 2, arcade.color.WHITE)
 
         # nose
         arcade.draw_triangle_filled(310, 330, 330, 330, 320, 320, arcade.color.BLACK)
 
-        # ears unfinished
-        arcade.draw_lrtb_rectangle_outline(330, 345, 350, 300, arcade.color.BYZANTIUM, 5)
-
         # text
         arcade.draw_text("totoro", 20, 70, arcade.color.CASTLETON_GREEN)
+
+        # stomach triangles
+        points = [(305, 245), (320, 260), (335, 245)]
+        arcade.draw_line_strip(points, arcade.color.COOL_GREY, 9)
+        points = [(260, 235), (275, 250), (290, 235)]
+        arcade.draw_line_strip(points, arcade.color.COOL_GREY, 9)
+        points = [(350, 235), (365, 250), (380, 235)]
+        arcade.draw_line_strip(points, arcade.color.COOL_GREY, 9)
+
+        # whiskers
+        # arcade.draw_line( start x, start y, finish x, finish y, color, width)
+
+        # mouth
+        arcade.draw_arc_outline(320, 300, 7, 5, arcade.color.BLACK, 0, 180, 5, 0, 128)
 
         arcade.finish_render()
 
