@@ -44,6 +44,10 @@ class MyGame(arcade.Window):
         arcade.draw_circle_filled(320, 240, 90, arcade.color.COOL_GREY)
         arcade.draw_arc_filled(320, 310, 110, 120, arcade.color.COOL_GREY, 0, 180)
 
+        # tail
+        arcade.draw_ellipse_outline(320, 140, 76, 106, arcade.color.BLACK, 7, 0)
+        arcade.draw_ellipse_filled(320, 140, 70, 100, arcade.color.COOL_GREY, 0)
+
         # beige body
         arcade.draw_ellipse_filled(320, 215, 150, 130, arcade.color.BEIGE)
 
@@ -75,6 +79,15 @@ class MyGame(arcade.Window):
 
         # mouth
         arcade.draw_arc_outline(320, 300, 7, 5, arcade.color.BLACK, 0, 180, 5, 0, 128)
+
+        # legs
+        arcade.draw_ellipse_outline(270, 180, 46, 106, arcade.color.BLACK, 7, 320)
+        arcade.draw_ellipse_filled(270, 180, 40, 100, arcade.color.COOL_GREY, 320)
+        arcade.draw_ellipse_outline(370, 180, 46, 106, arcade.color.BLACK, 7, 45)
+        arcade.draw_ellipse_filled(370, 180, 40, 100, arcade.color.COOL_GREY, 45)
+
+        # paws UNFINISHED (circle + polygon)
+        # arcade.draw_circle_outline()
 
         arcade.finish_render()
 
