@@ -87,7 +87,12 @@ class MyGame(arcade.Window):
         arcade.draw_ellipse_filled(370, 180, 40, 100, arcade.color.COOL_GREY, 45)
 
         # paws UNFINISHED (circle + polygon)
-        # arcade.draw_circle_outline()
+        arcade.draw_circle_filled(350, 160, 22, arcade.color.COOL_GREY, 0)
+        arcade.draw_circle_filled(290, 160, 22, arcade.color.COOL_GREY, 0)
+        arcade.draw_circle_outline(350, 160, 22, arcade.color.BLACK, 3, 0)
+        arcade.draw_circle_outline(290, 160, 22, arcade.color.BLACK, 3, 0)
+        points = [()]
+        arcade.draw_polygon_filled(points, arcade.color.)
 
         arcade.finish_render()
 
